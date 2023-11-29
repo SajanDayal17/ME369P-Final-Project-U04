@@ -1,0 +1,12 @@
+1. Download code
+2. Make sure to install all packages from powerpoint (listed below)
+3. Install nba_api (instructions in the powerpoint) 
+4. Code is ready to use 
+
+API Used: https://github.com/swar/nba_api/blob/master/README.md
+Powerpoint: https://docs.google.com/presentation/d/1vmUwQ3j9owbdxUwwh657pY0RiN7LqvrovcFYVJwIWQk/edit#slide=id.p1
+
+Packages-
+TKinter: https://docs.python.org/3/library/tkinter.html
+Numpy: https://numpy.org/install/
+Datetime: https://docs.python.org/3/library/datetime.html
