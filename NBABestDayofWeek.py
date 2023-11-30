@@ -2,7 +2,9 @@
 """
 Created on Wed Oct 25 16:09:19 2023
 
-@author: sajan
+@author: Sajan Dayal, Mohammad Almubaid, Blake Jefferson
+UT Austin Mechanical Engineering Students for ME369P under Dr. Pryor
+Dream Team U04
 """
 from datetime import datetime
 import numpy as np
