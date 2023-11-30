@@ -1,12 +1,77 @@
-1. Download code
-2. Make sure to install all packages from powerpoint (listed below)
-3. Install nba_api (instructions in the powerpoint) 
-4. Code is ready to use 
+Created by: Sajan Dayal, Mohamad Almubaid, Blake Jefferson
+Students of University of Texas at Austin, ME369P by Dr. Pryor
+Dream Team U04
 
+Documentation for Best Day of Week for NBA Players
+
+Github: https://github.com/SajanDayal17/ME369P-Final-Project-U04
+
+Powerpoint: https://docs.google.com/presentation/d/1vmUwQ3j9owbdxUwwh657pY0RiN7LqvrovcFYVJwIWQk/edit?usp=sharing
+
+Objective: 
+	 Use Python to analyze which day of the week a selected NBA player performs best for all major statistics. The major statistical categories included are- points, rebounds, assists, steals, blocks, turnovers, fouls, and plus/minus. When run, the user will interact with an input GUI where they will enter a selected NBA player they want to analyze. This will lead to an output GUI with the best day and worst day of the week for each statistical category for the NBA player with their average on that day. Additionally, it will show the day of the week they perform the best and the worst on. 
+
+Instructions For How to Use Code:
+Go to the github link above
+Download code off of the Github repository
+Open the code into your desired IDE
+Make sure all the packages mentioned below are installed
+If packages are not installed, follow the instructions below
+Run code
+Once the first GUI pops up, enter the desired NBA player
+This can be done by scrolling down the dropdown
+This can also be done by entering the player into the search bar, opening the dropdown and clicking the player (faster approach)
+Once the player is selected hit the enter button
+A new GUI should pop up with the resulting stats for the NBA player with their best day of the week 
+If the user wants to search a new player, return to the original GUI tab and enter the new player
+
+Packages Used:
+Tkinter- Create GUIs for user input and show the results
+nba_api- Call list of players and their game logs from the NBA database
+Numpy- Sort and manipulate the individual game statistics
+datetime- Convert the gamedate to a day of the week
+
+
+
+
+How To Install Packages (type lines into kernel):
+Tkinter- 
+ python -m pip install tk
+nba_api-
+pip install nba_api
+Requires Python 3.7+
+Installed requests and numpy
+To install requests- pip install requests
+Numpy- 
+pip install numpy
+datetime- 
+Should be installed as it is part of Python standard library
+
+Code Architecture:
+Call the database of players from nba_api
+User selects the desired player on the input GUI
+The desired player’s ID gets sent back to nba_api and their game log for the 2022-2023 is returned
+The code sorts the players statistics by the day of the week. From there the averages are calculated for each stat for each day of the week. The minimum and maximum and the corresponding day of the week is found.  
+The results are displayed in a new output GUI
+
+Functions:
+
+def on_button_click(player):
+	Sends the selected NBA player back to the api and gets their gamelogs. From there, all the averages for each statistical category is calculated. Finally an array is made with the minimum, day of the minimum, maximum, and day of the maximum is created.
+
+def no_gamesplayed_gui(player):
+	This function deals with the scenario where a player has not played a signal game. In this case it returns a GUI with a message that the player did not play in the 2022-2023 season
+.
+def create_new_gui(result, player):
+	This function displays the results for the entered player when they did play for the 2022-2023 season. It takes all the minimum, maximum, and days of the week and displays it in a new resulting GUI. 
+
+def search(event):
+	This function allows for the dropdown to be searched in the input GUI. It allows for a more efficient process of looking up players.
+
+
+Important Links:
+GitHub Repository: https://github.com/SajanDayal17/ME369P-Final-Project-U04
 API Used: https://github.com/swar/nba_api/blob/master/README.md
-Powerpoint: https://docs.google.com/presentation/d/1vmUwQ3j9owbdxUwwh657pY0RiN7LqvrovcFYVJwIWQk/edit#slide=id.p1
-
-Packages-
-TKinter: https://docs.python.org/3/library/tkinter.html
-Numpy: https://numpy.org/install/
-Datetime: https://docs.python.org/3/library/datetime.html
+TKinter: https://docs.python.org/3/library/tkinter.html 
+Numpy: https://numpy.org/install/ 
+Datetime: https://docs.python.org/3/library/datetime.html 
